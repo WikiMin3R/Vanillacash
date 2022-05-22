@@ -1,0 +1,12 @@
+# List of fixed seed nodes for main network
+
+# IPv4 nodes
+75.119.140.224
+75.119.140.225
+78.57.248.53
+95.111.247.164
+207.180.216.126
+
+# IPv6 nodes
+
+# Onion nodes
