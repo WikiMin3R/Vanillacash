@@ -1,0 +1,261 @@
+# Vanillacash - Snapcraft Build - Known to build in most Ubuntu versions
+# https://vanillacash.com
+# https://github.com/MadCatMining/Vanillacash
+# By MadCatMining
+name: vanillacash
+version: '1.0.1.1'
+summary: Vanillacash
+description: | 
+  An open source hybrid cryptocurrency called Vanillacash, which features Staking, Mining, Multisig, and much more!
+base: core18
+  
+grade: stable
+confinement: strict
+
+plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes:gtk-3-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes:icon-themes
+  sound-themes:
+    interface: content
+    target: $SNAP/data-dir/sounds
+    default-provider: gtk-common-themes:sounds-themes
+ 
+apps:
+  vanillacashd:
+    command: bin/vanillacashd
+    plugs: [home, network, network-bind]
+    daemon: forking
+  daemon:
+    command: bin/vanillacashd
+    plugs: [home, network, network-bind]
+    environment:
+      XDG_DATA_DIRS: $SNAP_USER_DATA:/var/lib/snapd/desktop:$XDG_DATA_DIRS
+      # Override HOME so the datadir is located at
+      # ~/snap/vanillacash/common/.vanillacash/ instead of
+      # ~/snap/vanillacash/current/.vanillacash/, and each new version of the
+      # snap won't have a different data directory:
+      # https://docs.snapcraft.io/environment-variables/7983
+      HOME: $SNAP_USER_COMMON
+  vanillacash:
+    command: desktop-launch $SNAP/bin/Vanillacash-qt
+    plugs: [home, network, network-bind, unity7, wayland, desktop-legacy, desktop, x11, gsettings]
+    desktop: vanillacash.desktop
+    environment:
+      QT_QPA_PLATFORMTHEME: gtk3
+      XDG_DATA_DIRS: $SNAP_USER_DATA:/var/lib/snapd/desktop:$XDG_DATA_DIRS
+      HOME: $SNAP_USER_COMMON
+ 
+parts:
+  aopenssl:
+    plugin: nil
+    source: https://vanillacash.com/wp-content/storage/contrib/openssl-1.0.2g.tar.gz
+    build-packages:
+      - g++
+      - build-essential
+      - libtool
+      - zlib1g-dev
+    override-build: |
+      echo "Compile OpenSSL 1.0.2g"
+      sudo ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl -static zlib
+      sudo make depend
+      sudo make install
+      sudo ln -sf /usr/local/ssl/bin/openssl `which openssl`
+      sudo ldconfig
+  boost:
+    plugin: nil
+    source: https://vanillacash.com/wp-content/storage/contrib/boost_1_55_0.tar.gz
+    build-packages:
+      - g++
+      - clang
+      - build-essential
+      - python-dev
+      - autotools-dev
+      - libicu-dev
+      - libbz2-dev
+      - libboost-all-dev
+    override-build: |
+      echo "Compile Boost 1.55.0"
+      wget https://vanillacash.com/wp-content/storage/contrib/boost-1.56.0_copy_file.diff
+      echo "Applying patch"
+      patch --ignore-whitespace -p1 boost-1.56.0_copy_file.diff
+      sudo ./bootstrap.sh --prefix=/usr/local/ --with-icu
+      #sudo ./b2 install -j6 threading=multi --build-type=complete --layout=tagged
+      sudo ./b2 clean
+      sudo ./b2 install -j6 threading=multi --build-type=complete --layout=tagged --prefix=/usr/local define=BOOST_SYSTEM_NO_DEPRECATED stage release
+      sudo ldconfig
+  berkeleydb:
+    plugin: nil
+    source: https://vanillacash.com/wp-content/storage/contrib/db-4.8.30.NC.tar.gz
+    build-packages:
+      - build-essential 
+      - libtool
+      - autotools-dev 
+      - automake 
+      - pkg-config 
+      - bsdmainutils 
+      - python3
+      - curl
+      - wget
+      - patch
+    override-build: |
+      echo "Compile BerkeleyDB 4.8.30.NC"
+      wget https://vanillacash.com/wp-content/storage/contrib/db_4.8.30.NC.patch
+      echo "Applying patch"
+      patch --ignore-whitespace -p1 db_4.8.30.NC.patch
+      cd dist/
+      rm -f "config.guess"
+      rm -f "config.sub"
+      curl "https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=4550d2f15b3a7ce2451c1f29500b9339430c877f" >> config.guess
+      curl "https://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=4550d2f15b3a7ce2451c1f29500b9339430c877f" >>config.sub
+      cd ..
+      cd build_unix/
+      sudo ../dist/configure --enable-cxx --disable-shared --disable-replication --with-pic --prefix=/usr/local
+      sudo make -j6
+      sudo make install -j6
+      sudo ln -sf libdb-4.8.a libdb.a
+      sudo ln -sf libdb_cxx-4.8.a libdb_cxx.a
+      sudo ldconfig
+  desktop-qt5:
+    build-packages:
+    - build-essential
+    - qtbase5-dev
+    - dpkg-dev
+    make-parameters:
+    - FLAVOR=qt5
+    plugin: make
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-subdir: qt
+    stage-packages:
+    - libxkbcommon0
+    - ttf-ubuntu-font-family
+    - dmz-cursor-theme
+    - light-themes
+    - adwaita-icon-theme
+    - gnome-themes-standard
+    - shared-mime-info
+    - libqt5gui5
+    - libgdk-pixbuf2.0-0
+    - libqt5svg5
+    - try:
+      - appmenu-qt5
+    - locales-all
+    - xdg-user-dirs
+    - fcitx-frontend-qt5
+  daemon:
+    source: https://github.com/MadCatMining/Vanillacash.git
+    source-type: git
+    source-tag: main
+    plugin: nil
+    build-packages:
+      - build-essential
+      - libtool
+      - autotools-dev
+      - automake
+      - pkg-config
+      - libevent-dev
+      - bsdmainutils
+    override-build: |
+      set -x
+      ARCH=$(uname -m)
+      MF=makefile.unix
+      if [ "$ARCH" = "x86_64" ]; then
+          MF="makefile.unix"
+      elif [ "$ARCH" = "i686" ] || [ "$ARCH" = "i386" ]; then
+          MF="makefile.arm"
+      elif [ "$ARCH" = "armv7l" ] || [ "$ARCH" = "armv6l" ]; then
+          MF="makefile.arm"
+      elif [ "$ARCH" = *"armv8"* ] || [ "$ARCH" = "aarch64" ]; then
+          MF="makefile.arm"
+      elif [ "$ARCH" = *"mips64le"* ]; then
+          MF="makefile.arm"
+      elif [ "$ARCH" = *"mips64"* ]; then
+          MF="makefile.arm"
+      elif [ "$ARCH" = *"mipsle"* ]; then
+          MF="makefile.arm"
+      elif [ "$ARCH" = *"mips"* ]; then
+          MF="makefile.arm"
+      elif [[ "$ARCH" == "ppc64le" ]]; then
+          MF="makefile.arm"
+      elif [[ "$ARCH" == "ppc64" ]]; then
+          MF="makefile.arm"
+      fi
+      chmod 775 share/genbuild.sh && chmod 775 src/leveldb/build_detect_platform 
+      cd src/leveldb
+      make clean
+      BOOST_LIB_SUFFIX=-mt BOOST_INCLUDE_PATH=/usr/local/include BOOST_LIB_PATH=/usr/local/lib OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib BDB_INCLUDE_PATH=/usr/local/include BDB_LIB_PATH=/usr/local/lib make libleveldb.a libmemenv.a -j4
+      cd ..
+      make -f "${MF}" clean
+      BOOST_LIB_SUFFIX=-mt BOOST_INCLUDE_PATH=/usr/local/include BOOST_LIB_PATH=/usr/local/lib OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib BDB_INCLUDE_PATH=/usr/local/include BDB_LIB_PATH=/usr/local/lib make -f "${MF}" STATIC=1 -j4
+      mkdir $SNAPCRAFT_PART_INSTALL/bin
+      cp $SNAPCRAFT_PART_BUILD/src/vanillacashd $SNAPCRAFT_PART_INSTALL/bin/vanillacashd
+  vanillacash:
+    source: https://github.com/MadCatMining/Vanillacash.git
+    source-type: git
+    source-tag: main
+    plugin: qmake
+    qt-version: qt5
+    build-packages:
+      - wget
+      - unzip
+      - curl
+      - build-essential
+      - apt-transport-https
+      - zlib1g-dev
+      - libminiupnpc-dev
+      - libevent-dev
+      - libtool
+      - libprotobuf-dev
+      - protobuf-compiler
+      - libqt5gui5
+      - libqt5core5a
+      - libqt5dbus5
+      - qttools5-dev
+      - qttools5-dev-tools
+      - qt5-default
+      - qtbase5-dev-tools
+    stage-packages:
+      - wget
+      - unzip
+      - curl
+      - build-essential
+      - apt-transport-https
+      - zlib1g-dev
+      - libminiupnpc-dev
+      - libevent-dev
+      - libtool
+      - libqt5gui5
+      - libqt5core5a
+      - libqt5dbus5
+      - qttools5-dev
+      - qttools5-dev-tools
+      - qt5-default
+      - qtbase5-dev-tools
+      - qtwayland5
+    override-build: |
+      qmake "RELEASE=1" "USE_DBUS=1" "USE_UPNP=1" BOOST_LIB_SUFFIX=-mt BOOST_INCLUDE_PATH=/usr/local/include BOOST_LIB_PATH=/usr/local/lib OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib BDB_INCLUDE_PATH=/usr/local/include BDB_LIB_PATH=/usr/local/lib vanillacash.pro
+      make -f Makefile clean
+      make -f Makefile -j6
+      cp "Vanillacash-qt" $SNAPCRAFT_PART_INSTALL/bin
+    after: [desktop-qt5]
+  desktop:
+    source: snap/gui
+    plugin: dump
+  hooks:
+    plugin: dump
+    source: hooks/
+    organize:
+      bin/: snap/hooks/
+
+hooks:
+  install:
+    plugs: [network, network-bind]
+  post-refresh:
+    plugs: [network, network-bind]
+  configure:
+    plugs: [network, network-bind]
