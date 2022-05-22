@@ -1,30 +1,16 @@
-![image](https://github.com/MadCatMining/Vanillacash/blob/0f2bae7727bc98d63252f9727b35bf497b19eb49/src/qt/res/icons/vanillacash.png)
-# Vanillacash
+Vanillacash = V(anilla)cash = Vcash
+===================================
 
-## Coin Name : XVCnutive coin
-## Coin Ticker : XVC 
-## Coin Type : Experimental POW + POS HYBRID
-## Algo : hmq1725
-## Blocktime : 75 Sec
-## Drift Time : 10 Minutes
-## Address letter: D / E
-## Rpc Port : 16000 
-## P2p Port : 16001
-## Minimum Stake confirms 150
-## Minimum Stake age : 2 Hours 
-## Retarget : 750 seconds
-## Coinbase Mining Maturity : 75 Blocks
-## Coinbase Wallet Send Maturity : 10 Blocks
-## Min Tx fee 0.00000250 : * This is to allow easier movement for miner pools * 
-## Premine : 5 % Premine ( DUMPED by original developer )
-## Coin rewards :
-## POW  
-## Even 0.04 
-## Odd 0.01 
-## Halving 500 000 BLOCKS
-## POS 
-## even 0.0001
-## odd 0.01
-## Halving 1 000 000 BLOCKS
-# Total Coins produced 200 000
+A decentralized currency for the internet.
+
+This release is the first code update since 2018, with primary aim of democratizing mining 
+(by utilizing new, ASIC-resistant algo) and introducing atomic swaps (BIP-65) compatibility.
+
+New to this version / Major differences between this and previous version(s):
+1) Algo changed to HMQ1725, with benefit of CPU-friendly mining
+2) Elimination of the non-funcioning / defunct masternode functionality
+3) Restoration of a more democratic and fair, UTXO-based staking mechanism
+
+The new code will be compatible with multitude of modern platforms, eliminating problems
+related to exchange / DEX / multi-wallet / ElectrumX incompatibilities.
 
