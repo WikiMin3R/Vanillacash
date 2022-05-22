@@ -1,0 +1,16 @@
+# http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-1.0.html
+[Desktop Entry]
+Type=Application
+Version=master
+Encoding=UTF-8
+Name=Vanillacash
+Icon=${SNAP}/meta/gui/vanillacash128.png
+MimeType=x-scheme-handler/vanillacash;
+Exec=vanillacash
+Terminal=false
+Categories=Office;Finance;
+Comment=Vanillacash P2P Hybrid Cryptocurrency
+Keywords=internet;bitcoin;vanillacash;
+Comment[fr]=Vanillacash, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Vanillacash, eşten eşe kriptografik sanal para birimi
+Comments[es]=Vanillacash, moneda virtual criptográfica peer-to-peer
