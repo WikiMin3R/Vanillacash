@@ -3,7 +3,7 @@
 # https://github.com/MadCatMining/Vanillacash
 # By MadCatMining
 name: vanillacash
-version: '1.0.1.1'
+version: '1.0.1.2'
 summary: Vanillacash
 description: | 
   An open source hybrid cryptocurrency called Vanillacash, which features Staking, Mining, Multisig, and much more!
