@@ -948,7 +948,7 @@ void static PruneOrphanBlocks()
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees, int nHeight)
 {
-    int64_t nSubsidy = 0 * COIN; //Vanillacash Protocol rewards 0.01 XVC curve up and down to 0.04 DIMI
+    int64_t nSubsidy = 0 * COIN; //Vanillacash Protocol rewards 0.01 XVC curve up and down to 0.04 XVC
 
     if(nHeight < 1000)
     {
@@ -981,7 +981,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, int nHeight)
 {
     int64_t nSubsidy= 0 * COIN;
     
-    if(IsWavePOS(nHeight)) //Even blocks rewards 0.01 DIMI curve up and down 0.03 DIMI 
+    if(IsWavePOS(nHeight)) //Even blocks rewards 0.01 XVC curve up and down 0.03 XVC
    
 {
     	if(nHeight % 2)

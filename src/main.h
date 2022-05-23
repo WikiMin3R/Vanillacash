@@ -58,7 +58,7 @@ inline int64_t FutureDrift(int64_t nTime) { return nTime + 30 * 60; }
 /** Block target spacing defines */
 inline unsigned int GetTargetSpacing(int nHeight) {return 75; }
 
-inline bool IsWavePOS(int nHeight) { return TestNet() || nHeight > 40000; }
+inline bool IsWavePOS(int nHeight) { return TestNet() || nHeight > 16001; }
 
 extern CScript COINBASE_FLAGS;
 extern CCriticalSection cs_main;

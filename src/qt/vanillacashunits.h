@@ -1,5 +1,5 @@
-#ifndef XVCNUTIVEUNITS_H
-#define XVCNUTIVEUNITS_H
+#ifndef VANILLACASHUNITS_H
+#define VANILLACASHUNITS_H
 
 #include <QString>
 #include <QAbstractListModel>
@@ -66,4 +66,4 @@ private:
 };
 typedef VanillacashUnits::Unit VanillacashUnit;
 
-#endif // XVCNUTIVEUNITS_H
+#endif // VANILLACASHUNITS_H

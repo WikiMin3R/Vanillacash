@@ -28,7 +28,7 @@ public:
         ProxyPort,         // int
         Fee,               // qint64
         ReserveBalance,    // qint64
-        DisplayUnit,       // XVCnuCoinUnits::Unit
+        DisplayUnit,       // VanillacashUnits::Unit
         Language,          // QString
         CoinControlFeatures, // bool
         UseBlackTheme,     // bool

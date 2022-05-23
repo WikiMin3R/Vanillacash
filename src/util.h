@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef XVCNUTIVE_UTIL_H
-#define XVCNUTIVE_UTIL_H
+#ifndef VANILLACASH_UTIL_H
+#define VANILLACASH_UTIL_H
 
 #ifndef WIN32
 #include <sys/types.h>

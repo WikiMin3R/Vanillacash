@@ -14,7 +14,7 @@ static const string strSecret1     ("5HxWvvfubhXpYYpS3tJkw6fq9jE9j18THftkZjHHfmF
 static const string strSecret2     ("5KC4ejrDjv152FGwP386VD1i2NYc5KkfSMyv1nGy1VGDxGHqVY3");
 static const string strSecret1C    ("Kwr371tjA9u2rFSMZjTNun2PXXP3WPZu2afRHTcta6KxEUdm1vEw");
 static const string strSecret2C    ("L3Hq7a8FEQwJkW1M2GNKDW28546Vp5miewcCzSqUD9kCAXrJdS3g");
-static const CXVCnutivCoinAddress addr1 ("EQFqqMUD55ZV3PJEJZtaKCsQmjLT6JkjvJ");
+static const CVanillacashAddress addr1 ("EQFqqMUD55ZV3PJEJZtaKCsQmjLT6JkjvJ");
 static const CVanillacashAddress addr2 ("EF5y5E5FMc5YzdJtB9hLaUe43GDxEKXENJ");
 static const CVanillacashAddress addr1C("ENoJrossxPBKfCHuJXT4HadJrXRE9Fxiqs");
 static const CVanillacashAddress addr2C("ECRj2HyM1CXWzHAXLQtiGLyggNT9WQqsDs");

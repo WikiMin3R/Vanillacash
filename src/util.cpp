@@ -1040,7 +1040,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
                ConfPath = GetDataDir() / "vanillacash.conf";
                FILE* ConfFile = fopen(ConfPath.string().c_str(), "w");
                fprintf(ConfFile, "maxconnections=24\n");
-               fprintf(ConfFile, "rpcuser=XVCnutiveWalletUser\n");
+               fprintf(ConfFile, "rpcuser=VanillacashWalletUser\n");
 
                char s[32];
                for (int i = 0; i < 32; ++i)

@@ -52,7 +52,7 @@ QT_TRANSLATE_NOOP("vanillacash-core", ""
 QT_TRANSLATE_NOOP("vanillacash-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("vanillacash-core", "Run in the background as a daemon and accept commands"),
 QT_TRANSLATE_NOOP("vanillacash-core", "Use the test network"),
-QT_TRANSLATE_NOOP("xvcnutiveoin-core", ""
+QT_TRANSLATE_NOOP("vanillacash-core", ""
 "Output debugging information (default: 0, supplying <category> is optional)"),
 QT_TRANSLATE_NOOP("vanillacash-core", "If <category> is not supplied, output all debugging information."),
 QT_TRANSLATE_NOOP("vanillacash-core", "<category> can be:"),

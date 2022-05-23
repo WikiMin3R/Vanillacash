@@ -24,10 +24,10 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->addressIn_SM->setPlaceholderText(tr("Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)"));
+    ui->addressIn_SM->setPlaceholderText(tr("Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)"));
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)"));
     ui->signatureIn_VM->setPlaceholderText(tr("Enter Vanillacash signature"));
 #endif
 

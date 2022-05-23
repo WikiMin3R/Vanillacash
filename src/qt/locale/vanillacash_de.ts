@@ -1784,8 +1784,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Empfängeradresse (z.b. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
+        <translation>Empfängeradresse (z.b. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1917,7 +1917,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to send the payment to (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1958,8 +1958,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Empfängeradresse (z.b. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
+        <translation>Empfängeradresse (z.b. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</translation>
     </message>
 </context>
 <context>
@@ -1982,7 +1982,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to sign the message with (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2046,7 +2046,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address the message was signed with (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2062,8 +2062,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Empfängeradresse (z.b. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
+        <translation>Empfängeradresse (z.b. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</translation>
     </message>
     <message>
         <location line="-2"/>

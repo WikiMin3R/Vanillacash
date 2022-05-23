@@ -1150,8 +1150,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the XVCnutive client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть порт для XVCnutive-клиента на роутере. Работает только если Ваш роутер поддерживает UPnP, и данная функция включена.</translation>
+        <source>Automatically open the Vanillacash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть порт для Vanillacash-клиента на роутере. Работает только если Ваш роутер поддерживает UPnP, и данная функция включена.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1779,8 +1779,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Введите Vanillacash-адрес (например D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
+        <translation>Введите Vanillacash-адрес (например 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1912,8 +1912,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Адрес получателя платежа (например D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to send the payment to (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
+        <translation>Адрес получателя платежа (например 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</translation>
     </message>
     <message>
         <location line="+60"/>
@@ -1953,8 +1953,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Введите Vanillacash-адрес (например D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
+        <translation>Введите Vanillacash-адрес (например 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</translation>
     </message>
 </context>
 <context>
@@ -1977,8 +1977,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Адрес, которым вы хотите подписать сообщение  (напр. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address to sign the message with (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
+        <translation>Адрес, которым вы хотите подписать сообщение  (напр. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2041,8 +2041,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Адрес, которым было подписано сообщение (напр. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>The address the message was signed with (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
+        <translation>Адрес, которым было подписано сообщение (напр. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -2057,8 +2057,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Введите адрес Vanillacash (напр. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
+        <translation>Введите адрес Vanillacash (напр. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</translation>
     </message>
     <message>
         <location line="-2"/>

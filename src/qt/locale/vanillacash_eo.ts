@@ -1148,7 +1148,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
         <message>
         <location line="+6"/>
-        <source>Automatically open the XVCnutive client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Vanillacash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1234,7 +1234,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Elekti la defaŭltan manieron por montri xvcnutivemonajn sumojn en la interfaco, kaj kiam vi sendos xvcnutivemonon.</translation>
+        <translation>Elekti la defaŭltan manieron por montri vanillacashmonajn sumojn en la interfaco, kaj kiam vi sendos vanillacashmonon.</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1777,7 +1777,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-174"/>
-        <source>Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1828,7 +1828,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Konfirmi sendon de xvcnutivemono</translation>
+        <translation>Konfirmi sendon de vanillacashmono</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1910,7 +1910,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+34"/>
-        <source>The address to send the payment to (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to send the payment to (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1951,7 +1951,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1975,7 +1975,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address to sign the message with (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2039,7 +2039,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>The address the message was signed with (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2055,7 +2055,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Vanillacash address (e.g. D8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <source>Enter a Vanillacash address (e.g. 8x0VaNiLLaCaSh0xIs0xAwEsOmE0xEWMCI)</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2880,7 +2880,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Vanillacash Alert&quot; admin@
     <message>
         <location line="+40"/>
         <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL-agordaĵoj: (vidu la vikio de xvcnutivemono por instrukcioj pri agordado de SSL)</translation>
+        <translation>SSL-agordaĵoj: (vidu la vikio de vanillacashmono por instrukcioj pri agordado de SSL)</translation>
     </message>
     <message>
         <location line="-38"/>
