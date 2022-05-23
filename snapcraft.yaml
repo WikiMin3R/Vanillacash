@@ -1,6 +1,6 @@
 # Vanillacash - Snapcraft Build - Known to build in most Ubuntu versions
 # https://vanillacash.com
-# https://github.com/MadCatMining/Vanillacash
+# https://github.com/WikiMin3R/Vanillacash
 # By MadCatMining
 name: vanillacash
 version: '1.0.1.2'
@@ -54,7 +54,7 @@ apps:
 parts:
   aopenssl:
     plugin: nil
-    source: https://vanillacash.com/wp-content/storage/contrib/openssl-1.0.2g.tar.gz
+    source: https://diminutivecoin.com/wp-content/storage/contrib/openssl-1.0.2g.tar.gz
     build-packages:
       - g++
       - build-essential
@@ -69,7 +69,7 @@ parts:
       sudo ldconfig
   boost:
     plugin: nil
-    source: https://vanillacash.com/wp-content/storage/contrib/boost_1_55_0.tar.gz
+    source: https://diminutivecoin.com/wp-content/storage/contrib/boost_1_55_0.tar.gz
     build-packages:
       - g++
       - clang
@@ -81,7 +81,7 @@ parts:
       - libboost-all-dev
     override-build: |
       echo "Compile Boost 1.55.0"
-      wget https://vanillacash.com/wp-content/storage/contrib/boost-1.56.0_copy_file.diff
+      wget https://diminutivecoin.com/wp-content/storage/contrib/boost-1.56.0_copy_file.diff
       echo "Applying patch"
       patch --ignore-whitespace -p1 boost-1.56.0_copy_file.diff
       sudo ./bootstrap.sh --prefix=/usr/local/ --with-icu
@@ -91,7 +91,7 @@ parts:
       sudo ldconfig
   berkeleydb:
     plugin: nil
-    source: https://vanillacash.com/wp-content/storage/contrib/db-4.8.30.NC.tar.gz
+    source: https://diminutivecoin.com/wp-content/storage/contrib/db-4.8.30.NC.tar.gz
     build-packages:
       - build-essential 
       - libtool
@@ -105,7 +105,7 @@ parts:
       - patch
     override-build: |
       echo "Compile BerkeleyDB 4.8.30.NC"
-      wget https://vanillacash.com/wp-content/storage/contrib/db_4.8.30.NC.patch
+      wget https://diminutivecoin.com/wp-content/storage/contrib/db_4.8.30.NC.patch
       echo "Applying patch"
       patch --ignore-whitespace -p1 db_4.8.30.NC.patch
       cd dist/
@@ -148,7 +148,7 @@ parts:
     - xdg-user-dirs
     - fcitx-frontend-qt5
   daemon:
-    source: https://github.com/MadCatMining/Vanillacash.git
+    source: https://github.com/WikiMin3R/Vanillacash.git
     source-type: git
     source-tag: main
     plugin: nil
@@ -195,7 +195,7 @@ parts:
       mkdir $SNAPCRAFT_PART_INSTALL/bin
       cp $SNAPCRAFT_PART_BUILD/src/vanillacashd $SNAPCRAFT_PART_INSTALL/bin/vanillacashd
   vanillacash:
-    source: https://github.com/MadCatMining/Vanillacash.git
+    source: https://github.com/WikiMin3R/Vanillacash.git
     source-type: git
     source-tag: main
     plugin: qmake
