@@ -1,0 +1,4 @@
+obj/crypto/hamsi.o: crypto/hamsi.c crypto/sph_hamsi.h crypto/sph_types.h \
+ crypto/hamsi_helper.c
+crypto/hamsi.c crypto/sph_hamsi.h crypto/sph_types.h :
+ crypto/hamsi_helper.c :

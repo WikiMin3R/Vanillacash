@@ -1,0 +1,4 @@
+obj/crypto/sha2big.o: crypto/sha2big.c crypto/sph_sha2.h \
+ crypto/sph_types.h /home/sps-uni-usr/Vanillacash/src/md_helper.c
+crypto/sha2big.c crypto/sph_sha2.h :
+ crypto/sph_types.h /home/sps-uni-usr/Vanillacash/src/md_helper.c :
