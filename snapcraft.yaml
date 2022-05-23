@@ -238,6 +238,12 @@ parts:
       - qtbase5-dev-tools
       - qtwayland5
     override-build: |
+      chmod 775 share/genbuild.sh && chmod 775 src/leveldb/build_detect_platform 
+      cd src/leveldb
+      make clean
+      BOOST_LIB_SUFFIX=-mt BOOST_INCLUDE_PATH=/usr/local/include BOOST_LIB_PATH=/usr/local/lib OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib BDB_INCLUDE_PATH=/usr/local/include BDB_LIB_PATH=/usr/local/lib make libleveldb.a libmemenv.a -j4
+      cd ..
+      cd ..
       qmake "RELEASE=1" "USE_DBUS=1" "USE_UPNP=1" BOOST_LIB_SUFFIX=-mt BOOST_INCLUDE_PATH=/usr/local/include BOOST_LIB_PATH=/usr/local/lib OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib BDB_INCLUDE_PATH=/usr/local/include BDB_LIB_PATH=/usr/local/lib vanillacash.pro
       make -f Makefile clean
       make -f Makefile -j6
