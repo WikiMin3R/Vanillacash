@@ -1,4 +1,0 @@
-obj/crypto/whirlpool.o: crypto/whirlpool.c crypto/sph_whirlpool.h \
- crypto/sph_types.h /home/sps-uni-usr/Vanillacash/src/md_helper.c
-crypto/whirlpool.c crypto/sph_whirlpool.h :
- crypto/sph_types.h /home/sps-uni-usr/Vanillacash/src/md_helper.c :

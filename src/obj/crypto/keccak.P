@@ -1,4 +1,0 @@
-obj/crypto/keccak.o: crypto/keccak.c crypto/sph_keccak.h \
- crypto/sph_types.h
-crypto/keccak.c crypto/sph_keccak.h :
- crypto/sph_types.h :

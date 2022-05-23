@@ -1,4 +1,0 @@
-obj/crypto/shabal.o: crypto/shabal.c crypto/sph_shabal.h \
- crypto/sph_types.h
-crypto/shabal.c crypto/sph_shabal.h :
- crypto/sph_types.h :

@@ -1,2 +1,0 @@
-obj/crypto/skein.o: crypto/skein.c crypto/sph_skein.h crypto/sph_types.h
-crypto/skein.c crypto/sph_skein.h crypto/sph_types.h :

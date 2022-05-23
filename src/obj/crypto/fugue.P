@@ -1,2 +1,0 @@
-obj/crypto/fugue.o: crypto/fugue.c crypto/sph_fugue.h crypto/sph_types.h
-crypto/fugue.c crypto/sph_fugue.h crypto/sph_types.h :

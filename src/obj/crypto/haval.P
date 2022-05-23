@@ -1,4 +1,0 @@
-obj/crypto/haval.o: crypto/haval.c crypto/sph_haval.h crypto/sph_types.h \
- crypto/haval_helper.c
-crypto/haval.c crypto/sph_haval.h crypto/sph_types.h :
- crypto/haval_helper.c :
