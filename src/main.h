@@ -1,9 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2020-2022 EWMCI / Vanillacash developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef XVCNUTIVE_MAIN_H
-#define XVCNUTIVE_MAIN_H
+#ifndef VANILLACASH_MAIN_H
+#define VANILLACASH_MAIN_H
 
 #include "core.h"
 #include "bignum.h"
@@ -42,13 +43,13 @@ static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
 /** Default for -maxorphanblocksmib, maximum number of memory to keep orphan blocks */
 static const unsigned int DEFAULT_MAX_ORPHAN_BLOCKS = 40;
 /** The maximum number of entries in an 'inv' protocol message */
-static const unsigned int MAX_INV_SZ = 50000;
+static const unsigned int MAX_INV_SZ = 10000;
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
-static const int64_t MIN_TX_FEE = 0.00000250 * COIN;
+static const int64_t MIN_TX_FEE = 0.00001000 * COIN; // Updated 2022-May-22
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 /** No amount larger than this (in satoshi) is valid */
-static const int64_t MAX_MONEY = 200000 * COIN; // 15 million
+static const int64_t MAX_MONEY = 50000000 * COIN; // Updated 2022-May-22
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
@@ -139,7 +140,7 @@ const CBlockIndex* GetLastBlockIndex(const CBlockIndex* pindex, bool fProofOfSta
 void ThreadStakeMiner(CWallet *pwallet);
 
 //         
-//    XVCnutive Wave POW / POS Protocol 
+//    Vanillacash Wave POW / POS Protocol 
 //        Peak POW     Next Peak POW
 //         #            #
 //        # #          # #
