@@ -1,5 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2020-2022 EWMCI / Vanillacash developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -962,7 +963,7 @@ int64_t GetProofOfWorkReward(int64_t nFees, int nHeight)
     	nSubsidy = 0.01 * COIN;
     }
     
-    nSubsidy >>= (nHeight / 500000);
+    // nSubsidy >>= (nHeight / 500000); //Removed halving given already small rewards
     LogPrint("creation", "GetProofOfWorkReward() : create=%s nSubsidy=%d nHeight=%d\n", FormatMoney(nSubsidy), nSubsidy, nHeight);
 
     // hardCap v2.2
@@ -999,7 +1000,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, int nHeight)
 		nSubsidy = 0.02 * COIN;
     }
 
-    nSubsidy >>= (nHeight / 1000000);
+    // nSubsidy >>= (nHeight / 1000000); //Removed halving given already small rewards
     LogPrint("creation", "GetProofOfStakeReward(): create=%s nCoinAge=%d nHeight=%d\n", FormatMoney(nSubsidy), nCoinAge, nHeight);
 
     // hardCap v2.2
@@ -1014,7 +1015,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees, int nHeight)
 }
 
 //         
-//    Diminutive Wave POW / POS  Protocol 
+//    Vanillacash Wave POW / POS  Protocol 
 //        Peak POW     Next Peak POW
 //         #            #
 //        # #          # #
