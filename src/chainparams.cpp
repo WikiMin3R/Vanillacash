@@ -73,11 +73,11 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = 1653179101; // Saturday, May 21, 2022
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 1;
+        genesis.nNonce   = 389295;
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0xe50e5a053decf41980edc62c093346d7c1618262306806206e6c27ebe1c94cf6"));
+        assert(hashGenesisBlock == uint256("0x00000505271ee75ffd80991343e137d5d2eb50e767745094400fff925363f0a6"));
         assert(genesis.hashMerkleRoot == uint256("0xb41178b399c888f4aa12e468cdb4fdc995b460e39dc3ecebbf8ccae8859839f7"));
 
         /** DEPRICATED IN QT 5.6+ (To compile on Qt5.5.1 and lower uncomment  */
