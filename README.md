@@ -18,4 +18,4 @@ Tentative testing and deployment schedule:
 1) Initial go-live (alpha) - On or before June 1, 2022
 2) Initial testing complete - June 15, 2022
 3) PoS attains independence of PoW - June 21, 2022
-4) Full deployment (beta) - On or before July 15, 2022
+4) Full deployment (beta) - On or before August 19, 2022
