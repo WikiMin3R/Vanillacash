@@ -31,8 +31,8 @@ namespace Checkpoints
            ( 5000,        uint256("0x59de81be89916b23b7a3f00bea84bfcdb5e2a341fea56f6de5b63a0991586fc3") )    // June 4, 2022
            ( 25000,       uint256("0x14f5332c19a935a726167dbbe1b1259eea0ae9cd57a2be4d52e12e9e4ace9d59") )    // June 26, 2022
            ( 50000,       uint256("0x0000034f73ce3e0a1ce1ea3e95ffa326b3904f35af0cb8b991f55047860ced33") )    // July 26, 2022
-    //     ( 500000,      uint256("0x71ab8d761718638410f151b8b34290085fed410ec7a40d248b955a27e24acb6c") )  
-    //     ( 938888,      uint256("0x000000019d99432d683aea41a13f6f0ee9d5e18866d955cadc135dba12d04132") )    // Version 1010
+    //     ( 500000,      uint256("0x00") )    // TBD
+    //     ( 938888,      uint256("0x00") )    // TBD
          ;
 
     // TestNet has no checkpoints
