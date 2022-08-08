@@ -27,10 +27,10 @@ namespace Checkpoints
     //
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-           ( 0,           uint256("0x7dd1f385bff36586dd4f195c69dacc4df5907b329a448250ad0ab1434ddbdb99") )
-           ( 5000,        uint256("0x59de81be89916b23b7a3f00bea84bfcdb5e2a341fea56f6de5b63a0991586fc3") )    // June 4, 2022
-           ( 25000,       uint256("0x14f5332c19a935a726167dbbe1b1259eea0ae9cd57a2be4d52e12e9e4ace9d59") )    // June 26, 2022
-           ( 50000,       uint256("0x0000034f73ce3e0a1ce1ea3e95ffa326b3904f35af0cb8b991f55047860ced33") )    // July 26, 2022
+           ( 0,           uint256("0x00000505271ee75ffd80991343e137d5d2eb50e767745094400fff925363f0a6") )
+    //     ( 5000,        uint256("0x59de81be89916b23b7a3f00bea84bfcdb5e2a341fea56f6de5b63a0991586fc3") )    // TBD
+    //     ( 25000,       uint256("0x14f5332c19a935a726167dbbe1b1259eea0ae9cd57a2be4d52e12e9e4ace9d59") )    // TBD
+    //     ( 50000,       uint256("0x0000034f73ce3e0a1ce1ea3e95ffa326b3904f35af0cb8b991f55047860ced33") )    // TBD
     //     ( 500000,      uint256("0x00") )    // TBD
     //     ( 938888,      uint256("0x00") )    // TBD
          ;
