@@ -77,7 +77,7 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x7dd1f385bff36586dd4f195c69dacc4df5907b329a448250ad0ab1434ddbdb99"));
+        assert(hashGenesisBlock == uint256("0x00000505271ee75ffd80991343e137d5d2eb50e767745094400fff925363f0a6"));
         assert(genesis.hashMerkleRoot == uint256("0xb41178b399c888f4aa12e468cdb4fdc995b460e39dc3ecebbf8ccae8859839f7"));
 
         /** DEPRICATED IN QT 5.6+ (To compile on Qt5.5.1 and lower uncomment  */
