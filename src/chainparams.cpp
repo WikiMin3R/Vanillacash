@@ -77,7 +77,7 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x00000505271ee75ffd80991343e137d5d2eb50e767745094400fff925363f0a6"));
+        assert(hashGenesisBlock == uint256("0x7dd1f385bff36586dd4f195c69dacc4df5907b329a448250ad0ab1434ddbdb99"));
         assert(genesis.hashMerkleRoot == uint256("0xb41178b399c888f4aa12e468cdb4fdc995b460e39dc3ecebbf8ccae8859839f7"));
 
         /** DEPRICATED IN QT 5.6+ (To compile on Qt5.5.1 and lower uncomment  */
@@ -89,7 +89,7 @@ public:
         base58Prefixes[EXT_SECRET_KEY] = list_of(0xE1)(0xA3)(0x2B)(0x3E);
         */
         /** REQUIRED IN QT 5.6+  (To compile on Qt5.5.1 and lower comment out below) */
-	    base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 18);
+	base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 18);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 30);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1, 181);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0xAD)(0x1B)(0x12)(0xA4).convert_to_container<std::vector<unsigned char> >();
@@ -143,7 +143,7 @@ public:
         genesis.nNonce = 545;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00355b6d83d785481492e47c427d8167a1746be991324062703aeb55e8842013"));
+        assert(hashGenesisBlock == uint256("0x2174559c31c2950ce035376c114791c50e4d346d608cb38dd534e799da7a250a"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
