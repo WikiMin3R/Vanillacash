@@ -13,7 +13,6 @@ QMAKE_CFLAGS += -std=c99
 QMAKE_CXXFLAGS += -fpermissive -std=gnu++11
 
 
-
 greaterThan(QT_MAJOR_VERSION, 4) {
     QT += widgets
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
@@ -28,7 +27,6 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 # Dependency library locations can be customized with:
 #    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
-
 
 #  Windows begin
 #  BOOST_LIB_SUFFIX=-mgw49-mt-s-1_60
