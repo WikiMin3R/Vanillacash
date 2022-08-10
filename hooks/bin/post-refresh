@@ -1,3 +1,5 @@
+#Additional snap information
+
 #!/bin/sh -e
 
 # This prevents the vanillacash.daemon from booting upon snap refresh/install
