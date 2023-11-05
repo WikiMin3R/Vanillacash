@@ -1,6 +1,6 @@
 TEMPLATE = app
 TARGET = Vanillacash-qt
-VERSION = 1.0.1.1
+VERSION = 1.0.1.5
 INCLUDEPATH += src src/json src/qt
 QT += core gui network widgets
 DEFINES += ENABLE_WALLET
