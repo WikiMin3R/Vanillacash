@@ -1,6 +1,6 @@
-Vanillacash 1.0.1.0
+Vanillacash 1.0.1.5
 
-Copyright (c) 2020-2021 Vanillacash Developers
+Copyright (c) 2020-2023 Vanillacash Developers
 Copyright (c) 2013 NovaCoin Developers
 Copyright (c) 2011-2013 PPCoin Developers
 Copyright (c) 2018-2022 DiminutiveCoin Developers
@@ -18,5 +18,5 @@ The project has rich history, beginning with John Connor's original code.
 The current iteration is much more modern, with many contemporary enhancements built-in.
 Some of the features of the new code include: 
 [1] BIP-65 compatibility for atomic swaps
-[2] Well-balanced hybrid PoW / PoS block validation scheme, with highly democratic reward distribution
+[2] Transition from hybrid PoW / PoS block validation scheme to pure PoS block generation, with democratized staking mechanisms
 [3] HMQ 1725 block generation scheme, utilizing multi-algo approach via random, block-based protocol selection
