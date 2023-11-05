@@ -31,7 +31,8 @@ namespace Checkpoints
            ( 5000,        uint256("0x59de81be89916b23b7a3f00bea84bfcdb5e2a341fea56f6de5b63a0991586fc3") )    // May 2022
            ( 25000,       uint256("0x14f5332c19a935a726167dbbe1b1259eea0ae9cd57a2be4d52e12e9e4ace9d59") )    // Jun 2022
            ( 50000,       uint256("0x0000034f73ce3e0a1ce1ea3e95ffa326b3904f35af0cb8b991f55047860ced33") )    // Jul 2022
-    //     ( 500000,      uint256("0x00") )    // TBD
+           ( 500000,      uint256("0x81051d616d0f95cf77397a364d47fc710fbc30db1aa9e3aeb6088308a7fcc6e0") )    // Mar 2023
+           ( 750000,      uint256("0x00000002ceeafeb7924c912a45124be4c4bf4bec5be91ba35912b8e26fff07df") )    // Aug 2023
     //     ( 938888,      uint256("0x00") )    // TBD
          ;
 
