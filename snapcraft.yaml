@@ -54,7 +54,7 @@ apps:
 parts:
   aopenssl:
     plugin: nil
-    source: https://diminutivecoin.com/wp-content/storage/contrib/openssl-1.0.2g.tar.gz
+    source: https://diminutivecoin.com/storage/contrib/openssl-1.0.2g.tar.gz
     build-packages:
       - g++
       - build-essential
@@ -69,7 +69,7 @@ parts:
       sudo ldconfig
   boost:
     plugin: nil
-    source: https://diminutivecoin.com/wp-content/storage/contrib/boost_1_55_0.tar.gz
+    source: https://diminutivecoin.com/storage/contrib/boost_1_55_0.tar.gz
     build-packages:
       - g++
       - clang
@@ -81,7 +81,7 @@ parts:
       - libboost-all-dev
     override-build: |
       echo "Compile Boost 1.55.0"
-      wget https://diminutivecoin.com/wp-content/storage/contrib/boost-1.56.0_copy_file.diff
+      wget https://diminutivecoin.com/storage/contrib/boost-1.56.0_copy_file.diff
       echo "Applying patch"
       patch --ignore-whitespace -p1 boost-1.56.0_copy_file.diff
       sudo ./bootstrap.sh --prefix=/usr/local/ --with-icu
@@ -91,7 +91,7 @@ parts:
       sudo ldconfig
   berkeleydb:
     plugin: nil
-    source: https://diminutivecoin.com/wp-content/storage/contrib/db-4.8.30.NC.tar.gz
+    source: https://diminutivecoin.com/storage/contrib/db-4.8.30.NC.tar.gz
     build-packages:
       - build-essential 
       - libtool
@@ -105,7 +105,7 @@ parts:
       - patch
     override-build: |
       echo "Compile BerkeleyDB 4.8.30.NC"
-      wget https://diminutivecoin.com/wp-content/storage/contrib/db_4.8.30.NC.patch
+      wget https://diminutivecoin.com/storage/contrib/db_4.8.30.NC.patch
       echo "Applying patch"
       patch --ignore-whitespace -p1 db_4.8.30.NC.patch
       cd dist/
